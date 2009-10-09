@@ -31,7 +31,8 @@ void Panel::move_panel(int x, int y)
     this->move(x, y);
 }
 
-void Panel::paint_rectangle(QPainter &painter){
+void Panel::paint_rectangle(QPainter &painter)
+{
     int roundness(50);
     QRect widget_rect = this->rect();
 
