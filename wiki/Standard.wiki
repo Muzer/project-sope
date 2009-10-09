@@ -32,8 +32,10 @@ Blurred
 
 =2) Global variables=
 {{{
-QString project_name = tr("Project Sope");
+QString project_name = "Project Sope";
 }}}
 
+=3) Language=
+We will use british english when coding but use the tr() function to insure all strings are easily translatable.
 
 TBC
