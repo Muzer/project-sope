@@ -8,16 +8,23 @@ Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
     QRect g = desktop.availableGeometry(screen_no);
     g.getRect(&x, &y, &w, &h);
     if (position == PANEL_POSITION_TL) this->move_panel(x, y);
-    if (position == PANEL_POSITION_TR) this->move_panel((x + w) - this->width(), y);
-    if (position == PANEL_POSITION_BL) this->move_panel(x, (y + h) - this->height());
-    if (position == PANEL_POSITION_BR) this->move_panel((x + w) - this->width(), (y + h) - this->height());
+    if (position == PANEL_POSITION_TR) this->move_panel((x + w) -
+        this->width(), y);
+    if (position == PANEL_POSITION_BL) this->move_panel(x, (y + h) -
+        this->height());
+    if (position == PANEL_POSITION_BR) this->move_panel((x + w) - this->width(),
+        (y + h) - this->height());
     desktop_path = path;
-    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint | Qt::ToolTip);
+    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint |
+        Qt::ToolTip);
     project_name = "Project Sope"; // FIXME use /etc/sope/system.xml
-    this->setToolTip("This is the main application launcher for " + project_name);
+    this->setToolTip("This is the main application launcher for " +
+        project_name);
     this->setAttribute(Qt::WA_NoSystemBackground, true);
     //    this->setAttribute(Qt::WA_TranslucentBackground, true);
-    // The above is not needed or wanted in any way shape or form. In fact, the one above that isn't needed in my setup but let's keep it anyway, it doesn't do harm
+    // The above is not needed or wanted in any way shape or form. In fact, the
+    // one above that isn't needed in my setup but let's keep it anyway, it
+    // doesn't do harm
     QPainter painter;
     this->show();
 }
@@ -43,7 +50,8 @@ void Panel::paint_rectangle(QPainter &painter)
 
     // clip
     QPainterPath rounded_rect;
-    rounded_rect.addRoundRect(1, 1, widget_rect.width() - 2, widget_rect.height() - 2, roundness, roundness);
+    rounded_rect.addRoundRect(1, 1, widget_rect.width() - 2,
+        widget_rect.height() - 2, roundness, roundness);
     painter.setClipPath(rounded_rect);
 
     // get clipping region
@@ -53,7 +61,8 @@ void Panel::paint_rectangle(QPainter &painter)
     setMask(maskregion);
 
     // fill path with color
-    painter.fillPath(rounded_rect,QBrush(QColor(255,255,0,255))); // FIXME: Get colour from colours.xml
+    painter.fillPath(rounded_rect,QBrush(QColor(255,255,0,255)));
+    // FIXME: Get colour from colours.xml
 
     // restore painter
     painter.restore();
