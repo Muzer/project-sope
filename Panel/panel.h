@@ -4,6 +4,10 @@
 #include <QGLWidget>
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QPainter>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xatom.h>
+#include <QX11Info>
 
 enum { PANEL_POSITION_TL, PANEL_POSITION_TR, PANEL_POSITION_BL,
     PANEL_POSITION_BR };
