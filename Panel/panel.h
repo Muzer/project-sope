@@ -16,7 +16,7 @@ public:
     Panel(QWidget *parent = 0, QString path =
         "/usr/share/applications/panel_1/", int position = PANEL_POSITION_TL,
         int screen_no = -1);
-    // FIXME get list of applications from ~/.sope/default_applications.xml);
+    // FIXME get list of applications from ~/.sope/panel_settings.xml);
     ~Panel();
     void move_panel(int x, int y);
 
