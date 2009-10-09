@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'panel.h'
 **
-** Created: Fri Oct 9 19:18:10 2009
+** Created: Fri Oct 9 19:46:22 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -36,7 +36,7 @@ static const char qt_meta_stringdata_Panel[] = {
 };
 
 const QMetaObject Panel::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_Panel,
+    { &QGLWidget::staticMetaObject, qt_meta_stringdata_Panel,
       qt_meta_data_Panel, 0 }
 };
 
@@ -50,12 +50,12 @@ void *Panel::qt_metacast(const char *_clname)
     if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_Panel))
         return static_cast<void*>(const_cast< Panel*>(this));
-    return QWidget::qt_metacast(_clname);
+    return QGLWidget::qt_metacast(_clname);
 }
 
 int Panel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QGLWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

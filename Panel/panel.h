@@ -1,29 +1,20 @@
 #ifndef PANEL_H
 #define PANEL_H
 
-#include <QDesktopWidget>
-#include <QtGui/QWidget>
-#include <QtOpenGL/QGLWidget>
+#include <QGLWidget>
+#include <QtGui/QDesktopWidget>
 
-namespace Ui
-{
-    class Panel;
-}
-
-class Panel : public QWidget
+class Panel : public QGLWidget
 {
     Q_OBJECT
 
 public:
-    Panel(QWidget *parent = 0, QString path = "/usr/share/applications/panel_1/"); // FIXME get list of applications from ~/.sope/default_applications.xml
-    ~Panel();
+    Panel(QWidget *parent = 0, QString path = "/usr/share/applications/panel_1/"); // FIXME get list of applications from ~/.sope/default_applications.xml);
     void move_panel(int x, int y);
 
 private:
-    Ui::Panel *ui;
     QString desktop_path;
     QString project_name;
-    QGLWidget *glwidget;
 };
 
 #endif // PANEL_H
