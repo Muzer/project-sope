@@ -5,7 +5,7 @@ Where possible and appropriate we will use already created OPEN standards (espec
 
 =1) Colours=
 
-All colours are loaded from ~/.sope/colours.xml first, and if that doesn't exist or doesn't contain all the needed colours, get the rest from /etc/sope/colours.xml (this path can be added to with the SOPE_PATH environment variable, in which case the first things searched will be everything in $SOPE_PATH/colours.xml)
+All colours are loaded from ~/.sope/colours.xml first, and if that doesn't exist or doesn't contain all the needed colours, get the rest from /etc/sope/colours.xml (this path can be added to with the SOPE_PATH environment variable, in which case the first things searched will be everything in $SOPE_PATH/colours.xml). If none of these exist, fall back on defaults.
 
 ==1.1) Background==
 Default Colour: RGBA(170, 204, 238, 255) 
