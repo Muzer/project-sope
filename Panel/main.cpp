@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     panel1.show();
     QDesktopWidget desktop;
     int x, y, w, h;
-    QRect g = desktop.availableGeometry();
+    QRect g = desktop.availableGeometry(desktop.screenNumber(&panel1));
     g.getRect(&x, &y, &w, &h);
     panel2.move_panel(w - 48, h - 48);
     panel2.show();

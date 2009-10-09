@@ -9,7 +9,7 @@ Panel::Panel(QWidget *parent, QString path)
     desktop_path = path;
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     project_name = "Project Sope"; // FIXME use /etc/sope/system.xml
-    this->setToolTip(tr(QString("This is the main application launcher for " + project_name).toStdString().c_str()));
+    this->setToolTip("This is the main application launcher for " + project_name);
 }
 
 Panel::~Panel()
