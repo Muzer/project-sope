@@ -17,9 +17,10 @@ public:
 private:
     QString desktop_path;
     QString project_name;
+    void paint_rectangle(QPainter &painter);
 
 protected:
-    void paintEvent();
+    void paintEvent(QPaintEvent *event);
 };
 
 #endif // PANEL_H

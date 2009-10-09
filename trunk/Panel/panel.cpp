@@ -9,6 +9,7 @@ Panel::Panel(QWidget *parent, QString path)
     this->setToolTip("This is the main application launcher for " + project_name);
     this->setAttribute(Qt::WA_NoSystemBackground, true);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
+    QPainter painter;
 }
 
 Panel::~Panel()
@@ -20,10 +21,17 @@ void Panel::move_panel(int x, int y)
     this->move(x, y);
 }
 
-void Panel::paintEvent()
-{
+void Panel::paint_rectangle(QPainter &painter){
     QBrush brush(QColor(255, 255, 0, 255));
-    QPainter painter(this);
     painter.setBrush(brush);
-    painter.drawRoundRect(1, 1, 46, 46);
+    painter.drawRoundedRect(1, 1, this->width() - 2, this->height() - 2, 20, 15);
+}
+
+void Panel::paintEvent(QPaintEvent *event)
+{
+    QPainter painter;
+    painter.begin(this);
+    painter.setRenderHint(QPainter::Antialiasing);
+    paint_rectangle(painter);
+    painter.end();
 }
