@@ -5,7 +5,7 @@ Where possible and appropriate we will use already created OPEN standards (espec
 
 =1) Colours=
 
-All colours are loaded from ~/.sope/colours.xml first, and if that doesn't exist or doesn't contain all the needed colours, get the rest from /etc/sope/colours.xml (this path can be added to with the SOPE_PATH environment variable, in which case the first things searched will be everything in $SOPE_PATH/colours.xml). If none of these exist, fall back on defaults.
+All colours are loaded from ~/.sope/colours.xml first, and if that doesn't exist or doesn't contain all the needed colours, get the rest from /etc/sope/colours.xml (this path can be added to with the SOPE_SETTINGS_PATH environment variable, in which case the first things searched will be everything in $SOPE_SETTINGS_PATH/colours.xml). If none of these exist, fall back on defaults.
 
 ==1.1) Background==
 Default Colour: RGBA(170, 204, 238, 255) 
@@ -30,9 +30,24 @@ Blurred
 </section>
 }}}
 
-=2) Global variables=
+=2) System settings=
+
+These are settings pertaining to the whole Soap insallation that will always be the same throughout the whole of the installation. There aren't many of these, and changing them is not recommended. These are saved in SOPE_SETTINGS_PATH/system.xml (if it exists, /etc/sope/system.xml if and only if it doesn't). They cannot be overridden by single users (since they are designed to be the same in one installation).
+
+==2.1) Names==
+
+The name of the Sope installation and its version, and finally anything to append to the end (for specific "editions").
+
+Default project_name: Project Sope (for now)
+Default version: The version number of the installation.
+Default append: Nothing (NULL string)
+
 {{{
-QString project_name = "Project Sope";
+<section name="names">
+<setting value="Project Sope">project_name</setting>
+<setting value="0.0000001 alpha">version</setting>
+<setting value="">append</setting>
+</section>
 }}}
 
 =3) Language=
