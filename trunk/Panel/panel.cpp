@@ -1,5 +1,8 @@
 #include "panel.h"
 
+
+
+
 Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
 {
     this->resize(48, 48);
@@ -17,8 +20,17 @@ Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
         (y + h) - this->height());
     // Depending on the panel position, place it accordingly.
     desktop_path = path;
-    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint |
-        Qt::ToolTip);
+    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint );
+
+    Display *dpy = QX11Info::display(); // Remove taskbar button. NOTE This is
+    // what breaks Windows compatibility
+    Atom net_wm_state_skip_taskbar=XInternAtom(dpy,
+        "_NET_WM_STATE_SKIP_TASKBAR", False);
+    Atom net_wm_state = XInternAtom(dpy, "_NET_WM_STATE", False);
+    XChangeProperty(dpy, winId(), net_wm_state,
+        XA_ATOM, 32, PropModeAppend,
+        (unsigned char *)&net_wm_state_skip_taskbar, 1);
+
     project_name = "Project Sope"; // FIXME use /etc/sope/system.xml
     this->setToolTip("This is the main application launcher for " +
         project_name);
