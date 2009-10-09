@@ -23,6 +23,7 @@ private:
     Ui::Panel *ui;
     QString desktop_path;
     QString project_name;
+    QGLWidget *glwidget;
 };
 
 #endif // PANEL_H
