@@ -30,7 +30,10 @@ Blurred
 </section>
 }}}
 
-
+=2) Global variables=
+{{{
+QString project_name = tr("Project Sope");
+}}}
 
 
 TBC
