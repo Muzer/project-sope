@@ -1,0 +1,35 @@
+#summary The standard for the whole project.
+
+=0) Preface=
+Where possible and appropriate we will use already created OPEN standards (especially FreeDesktop).
+
+=1) Colours=
+
+All colours are loaded from ~/.sope/colours.xml first, and if that doesn't exist or doesn't contain all the needed colours, get the rest from /etc/sope/colours.xml (this path can be added to with the SOPE_PATH environment variable, in which case the first things searched will be everything in $SOPE_PATH/colours.xml)
+
+==1.1) Background==
+Default Colour: RGBA(170, 204, 238, 255) 
+
+{{{
+<section name="background">
+<colour r="170" g="204" b="238" a="255">BGColour</colour>
+</section>
+}}}
+
+
+2) Widgets
+Default BGColour: RGBA(1, 151, 253, 255)
+Defualt FanColour: RGBA(1, 205, 253, 255);
+Blurred
+
+{{{
+<section name="background">
+<colour r="1" g="151" b="253" a="255">BGColour</colour>
+<colour r="1" g="205" b="253" a="255">FanColour</colour>
+</section>
+}}}
+
+
+
+
+TBC
