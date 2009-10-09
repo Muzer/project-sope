@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Panel panel1;
-    Panel panel2(0, "/usr/share/applications/panel_2");
+    Panel panel2(0, "/usr/share/applications/panel_2"); // FIXME get list of applications from ~/.sope/default_applications.xml
     panel1.move_panel(0, 0);
     panel1.show();
     QDesktopWidget desktop;
