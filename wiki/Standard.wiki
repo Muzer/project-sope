@@ -39,7 +39,9 @@ These are settings pertaining to the whole Soap insallation that will always be 
 The name of the Sope installation and its version, and finally anything to append to the end (for specific "editions").
 
 Default project_name: Project Sope (for now)
+
 Default version: The version number of the installation.
+
 Default append: Nothing (NULL string)
 
 {{{
