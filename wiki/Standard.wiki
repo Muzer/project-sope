@@ -19,7 +19,8 @@ Default Colour: RGBA(170, 204, 238, 255)
 
 ==1.2) Widgets==
 Default BGColour: RGBA(1, 151, 253, 255)
-Defualt FanColour: RGBA(1, 205, 253, 255);
+
+Defualt FanColour: RGBA(1, 205, 253, 255)
 Blurred
 
 {{{
