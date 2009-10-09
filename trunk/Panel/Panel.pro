@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2009-10-09T16:22:23
+# Project created by QtCreator 2009-10-09T16:40:05
 #
 #-------------------------------------------------
 
@@ -9,8 +9,7 @@ QT       += opengl svg xml dbus
 TARGET = Panel
 TEMPLATE = app
 
-
-SOURCES += main.cpp\
+SOURCES += main.cpp \
         panel.cpp
 
 HEADERS  += panel.h
