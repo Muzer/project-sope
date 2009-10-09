@@ -24,7 +24,7 @@ Defualt FanColour: RGBA(1, 205, 253, 255)
 Blurred
 
 {{{
-<section name="background">
+<section name="widgets">
 <colour r="1" g="151" b="253" a="255">BGColour</colour>
 <colour r="1" g="205" b="253" a="255">FanColour</colour>
 </section>
