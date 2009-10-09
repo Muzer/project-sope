@@ -11,7 +11,19 @@ Panel::Panel(QWidget *parent, QString path)
     this->setAttribute(Qt::WA_TranslucentBackground, true);
 }
 
+Panel::~Panel()
+{
+}
+
 void Panel::move_panel(int x, int y)
 {
     this->move(x, y);
+}
+
+void Panel::paintEvent()
+{
+    QBrush brush(QColor(255, 255, 0, 255));
+    QPainter painter(this);
+    painter.setBrush(brush);
+    painter.drawRoundRect(1, 1, 46, 46);
 }
