@@ -17,6 +17,7 @@ Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
     this->setToolTip("This is the main application launcher for " + project_name);
     this->setAttribute(Qt::WA_NoSystemBackground, true);
 //    this->setAttribute(Qt::WA_TranslucentBackground, true);
+// The above is not needed or wanted in any way shape or form. In fact, the one above that isn't needed in my setup but let's keep it anyway, it doesn't do harm
     QPainter painter;
     this->show();
 }
