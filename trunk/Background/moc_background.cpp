@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'background.h'
 **
-** Created: Sat Oct 10 09:45:44 2009
+** Created: Sat Oct 10 11:39:58 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
