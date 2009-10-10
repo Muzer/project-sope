@@ -1,8 +1,5 @@
 #include "panel.h"
 
-
-
-
 Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
 {
     this->resize(48, 48); // FIXME: Set width to the number of applications.

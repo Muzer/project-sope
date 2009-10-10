@@ -1,6 +1,6 @@
-#include "background.h"
+#include "surface.h"
 
-Background::Background(QWidget *parent, int screen_no)
+Surface::Surface(QWidget *parent, int screen_no)
 {
     QDesktopWidget desktop;
     int x, y, w, h;
@@ -8,5 +8,5 @@ Background::Background(QWidget *parent, int screen_no)
     g.getRect(&x, &y, &w, &h);
     this->resize(w, h);
     this->move(0, 0);
-    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnBottomHint);
+    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 }
