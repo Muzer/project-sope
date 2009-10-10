@@ -5,7 +5,7 @@
 
 Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
 {
-    this->resize(48, 48);
+    this->resize(48, 48); // FIXME: Set width to the number of applications.
     QDesktopWidget desktop;
     int x, y, w, h;
     QRect g = desktop.availableGeometry(screen_no);
@@ -54,7 +54,7 @@ void Panel::move_panel(int x, int y)
 
 void Panel::paint_rectangle(QPainter &painter)
 {
-    int roundness(50);
+    int roundness(96);
     QRect widget_rect = this->rect();
 
     painter.save();
@@ -64,8 +64,8 @@ void Panel::paint_rectangle(QPainter &painter)
 
     // clip
     QPainterPath rounded_rect;
-    rounded_rect.addRoundRect(1, 1, widget_rect.width() - 2,
-        widget_rect.height() - 2, roundness, roundness);
+    rounded_rect.addRoundRect(0, 0, widget_rect.width(),
+        widget_rect.height(), roundness, roundness);
     painter.setClipPath(rounded_rect);
 
     // get clipping region
