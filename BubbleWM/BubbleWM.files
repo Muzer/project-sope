@@ -1,0 +1,11 @@
+src/eggaccelerators.c
+src/eggaccelerators.h
+src/main.c
+src/maximus-app.c
+src/maximus-app.h
+src/maximus-bind.c
+src/maximus-bind.h
+src/tomboykeybinder.c
+src/tomboykeybinder.h
+src/xutils.c
+src/xutils.h
