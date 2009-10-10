@@ -1,6 +1,6 @@
 #include "panel.h"
 
-Panel::Panel(QWidget *parent, QString path, int position, int screen_no)
+Panel::Panel(QString path, int position, int screen_no)
 {
     this->resize(48, 48); // FIXME: Set width to the number of applications.
     QDesktopWidget desktop;
@@ -81,6 +81,7 @@ void Panel::paint_rectangle(QPainter &painter)
 
 void Panel::paintEvent(QPaintEvent *event)
 {
+    event = event; // Get rid of warning
     QPainter painter(this);
     paint_rectangle(painter);
 }

@@ -17,7 +17,7 @@ class Panel : public QGLWidget
     Q_OBJECT
 
 public:
-    Panel(QWidget *parent = 0, QString path =
+    Panel(QString path =
         "/usr/share/applications/panel_1/", int position = PANEL_POSITION_TL,
         int screen_no = -1);
     // FIXME get list of applications from ~/.sope/panel_settings.xml);
