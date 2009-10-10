@@ -39,14 +39,21 @@ MainWindow::MainWindow(QWidget *parent)
     connect(btn_zoom_out, SIGNAL(clicked()), this, SLOT(zoom_out()));
     connect(btn_zoom_normal, SIGNAL(clicked()), this, SLOT(zoom_normal()));
     connect(ui->webView, SIGNAL(iconChanged()), this, SLOT(icon_changed()));
-    connect(ui->webView, SIGNAL(linkClicked(QUrl)), this, SLOT(link_clicked(QUrl)));
-    connect(ui->webView, SIGNAL(loadFinished(bool)), this, SLOT(load_finished(bool)));
-    connect(ui->webView, SIGNAL(loadProgress(int)), this, SLOT(load_progress(int)));
+    connect(ui->webView, SIGNAL(linkClicked(QUrl)), this, SLOT(link_clicked
+        (QUrl)));
+    connect(ui->webView, SIGNAL(loadFinished(bool)), this, SLOT(load_finished
+        (bool)));
+    connect(ui->webView, SIGNAL(loadProgress(int)), this, SLOT(load_progress
+        (int)));
     connect(ui->webView, SIGNAL(loadStarted()), this, SLOT(load_started()));
-    connect(ui->webView, SIGNAL(selectionChanged()), this, SLOT(selection_changed()));
-    connect(ui->webView, SIGNAL(statusBarMessage(QString)), this, SLOT(status_bar_message(QString)));
-    connect(ui->webView, SIGNAL(titleChanged(QString)), this, SLOT(title_changed(QString)));
-    connect(ui->webView, SIGNAL(urlChanged(QUrl)), this, SLOT(url_changed(QUrl)));
+    connect(ui->webView, SIGNAL(selectionChanged()), this, SLOT
+        (selection_changed()));
+    connect(ui->webView, SIGNAL(statusBarMessage(QString)), this, SLOT
+        (status_bar_message(QString)));
+    connect(ui->webView, SIGNAL(titleChanged(QString)), this, SLOT(title_changed
+        (QString)));
+    connect(ui->webView, SIGNAL(urlChanged(QUrl)), this, SLOT(url_changed
+        (QUrl)));
     normal_zoom = ui->webView->zoomFactor();
 }
 
