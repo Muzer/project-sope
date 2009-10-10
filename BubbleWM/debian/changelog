@@ -1,0 +1,54 @@
+maximus (0.4.8-0ubuntu3) jaunty; urgency=low
+
+  * Provide x-window-manager.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 20 Apr 2009 20:29:10 +0200
+
+maximus (0.4.8-0ubuntu2) jaunty; urgency=low
+
+  * Add missing bdep on libxtst-dev.
+  * Drop unused libdbus-1-dev, libdbus-glib-1-dev, libpango1.0-dev,
+    libcairo2-dev bdeps.
+
+ -- Loic Minier <lool@dooz.org>  Thu, 02 Apr 2009 12:39:11 +0200
+
+maximus (0.4.8-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 18 Mar 2009 10:30:30 +1100
+
+maximus (0.4.7-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 24 Feb 2009 15:15:51 +1100
+
+maximus (0.4.6-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release
+  * Standards-Version goes in the source stanza.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 18 Feb 2009 11:13:08 +1100
+
+maximus (0.4.3-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 28 Jan 2009 01:17:28 +1100
+
+maximus (0.4.0-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release (LP: #283355)
+    - Fix gnome client errors
+    - Better wrappers around x errors
+  * Update the control to add libgnomeui to the depends
+
+ -- Neil J. Patel <neil.patel@canonical.com>  Mon, 13 Oct 2008 17:17:05 +0100
+
+maximus (0.3-0ubuntu1) intrepid; urgency=low
+
+  * Inital release, based for Intrepid. (LP: #263493)
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Mon, 01 Sep 2008 14:38:02 +1000
+
