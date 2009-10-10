@@ -7,6 +7,6 @@ Surface::Surface(QWidget *parent, int screen_no)
     QRect g = desktop.availableGeometry(screen_no);
     g.getRect(&x, &y, &w, &h);
     this->resize(w, h);
-    this->move(0, 0);
+    this->move(x, y);
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 }
