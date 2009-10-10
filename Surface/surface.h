@@ -4,6 +4,11 @@
 #include <QGLWidget>
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QPainter>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xatom.h>
+#include <QX11Info>
+
 
 class Surface : public QGLWidget
 {
