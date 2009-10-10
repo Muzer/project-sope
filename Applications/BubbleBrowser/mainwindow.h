@@ -22,6 +22,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QPushButton>
 #include <QtGui/QProgressBar>
+#include <QtGui/QMouseEvent>
 #include <QtCore/QUrl>
 
 namespace Ui
@@ -65,6 +66,7 @@ private slots:
 
 protected:
     void resizeEvent();
+    void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // MAINWINDOW_H

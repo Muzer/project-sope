@@ -152,3 +152,10 @@ void MainWindow::zoom_normal()
 {
     ui->webView->setZoomFactor(normal_zoom);
 }
+
+void MainWindow::mousePressEvent(QMouseEvent *event)
+{
+    int dx = 0;
+    int dy = 0;
+    ui->webView->scroll(dx, dy);
+}
